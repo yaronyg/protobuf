@@ -613,7 +613,8 @@ class Map {
       }
     }
 
-#if __cplusplus >= 201103L && !defined(GOOGLE_PROTOBUF_OS_APPLE) && \
+#if __cplusplus >= 201103L && \
+    (!defined(GOOGLE_PROTOBUF_OS_APPLE) || defined(__GNUC__)) && \
     !defined(GOOGLE_PROTOBUF_OS_NACL) &&                            \
     !defined(GOOGLE_PROTOBUF_OS_EMSCRIPTEN)
     template<class NodeType, class... Args>
